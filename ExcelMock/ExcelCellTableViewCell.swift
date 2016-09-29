@@ -8,24 +8,66 @@
 
 import UIKit
 
-class ExcelCellTableViewCell: UITableViewCell {
+protocol NibLoadableView: class { }
 
+extension NibLoadableView where Self: UIView {
+    
+    static var nibName: String {
+        // notice the new describing here
+        // now only one place to refactor if describing is removed in the future
+        return String(describing: self)
+    }
+    
+}
+
+class ExcelCellTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var content: UIView!
     @IBOutlet weak var dataLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+   
     func setCellText(text : String){
         dataLabel.text = text
     }
     
+}
+
+extension UITableViewCell: NibLoadableView { }
+
+
+protocol ReusableView: class {}
+
+extension ReusableView where Self: UIView {
+    
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
+    
+}
+
+extension UITableViewCell: ReusableView { }
+
+
+extension UITableView {
+    
+    func register<T: UITableViewCell>(_: T.Type) where T: ReusableView, T: NibLoadableView {
+        
+        let nib = UINib(nibName: T.nibName, bundle: nil)
+        register(nib, forCellReuseIdentifier: T.reuseIdentifier)
+    }
+    
+    func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: IndexPath) -> T where T: ReusableView {
+        guard let cell = dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
+            fatalError("Could not dequeue cell with identifier: \(T.reuseIdentifier)")
+        }
+        
+        return cell
+    }
 }

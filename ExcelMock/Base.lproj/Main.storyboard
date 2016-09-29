@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vL6-sX-mEW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vL6-sX-mEW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -9,7 +9,7 @@
         <!--Values-->
         <scene sceneID="zJk-eC-Mqq">
             <objects>
-                <viewController id="AuO-72-pDU" sceneMemberID="viewController">
+                <viewController id="AuO-72-pDU" customClass="ValuesTableViewController" customModule="ExcelMock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lh2-1b-YLW"/>
                         <viewControllerLayoutGuide type="bottom" id="3JR-3J-gl8"/>
@@ -18,30 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M0Y-QB-D4Y">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M0Y-QB-D4Y" customClass="TableHeaderView" customModule="ExcelMock" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="BV4-Mf-lDL"/>
-                                </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k65-os-dgs">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="M0Y-QB-D4Y" firstAttribute="leading" secondItem="V7s-85-HJb" secondAttribute="leading" id="HGj-6I-W7t"/>
-                            <constraint firstItem="k65-os-dgs" firstAttribute="leading" secondItem="V7s-85-HJb" secondAttribute="leading" id="KuY-Pl-dec"/>
-                            <constraint firstAttribute="trailing" secondItem="M0Y-QB-D4Y" secondAttribute="trailing" id="am6-Lz-Dq0"/>
-                            <constraint firstItem="k65-os-dgs" firstAttribute="top" secondItem="M0Y-QB-D4Y" secondAttribute="bottom" id="fVn-Vh-fez"/>
-                            <constraint firstItem="M0Y-QB-D4Y" firstAttribute="top" secondItem="lh2-1b-YLW" secondAttribute="bottom" id="gOV-k1-Nux"/>
-                            <constraint firstAttribute="trailing" secondItem="k65-os-dgs" secondAttribute="trailing" id="mYe-mj-Q8m"/>
-                            <constraint firstItem="3JR-3J-gl8" firstAttribute="top" secondItem="k65-os-dgs" secondAttribute="bottom" id="pWp-Uu-6vs"/>
+                            <constraint firstItem="3JR-3J-gl8" firstAttribute="top" secondItem="M0Y-QB-D4Y" secondAttribute="bottom" constant="494" id="7KN-8X-fG9"/>
+                            <constraint firstItem="M0Y-QB-D4Y" firstAttribute="top" secondItem="lh2-1b-YLW" secondAttribute="bottom" id="FuR-nf-Plw"/>
+                            <constraint firstItem="M0Y-QB-D4Y" firstAttribute="leading" secondItem="V7s-85-HJb" secondAttribute="leading" id="x3m-sN-0bJ"/>
+                            <constraint firstItem="M0Y-QB-D4Y" firstAttribute="width" secondItem="V7s-85-HJb" secondAttribute="width" id="ylJ-Q3-Y77"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Values" id="qHI-TN-Ey3">
                         <barButtonItem key="rightBarButtonItem" title="i" id="itL-Y2-q6n"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="headerView" destination="M0Y-QB-D4Y" id="7Xv-xM-vbb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilh-ov-at6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,7 +44,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="nR3-aY-cuz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MAx-iJ-RUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="vL6-sX-mEW" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="6Fg-t5-c0r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -58,11 +51,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="KQL-d6-KO5" kind="relationship" relationship="viewControllers" id="Rmf-tL-VMY"/>
                         <segue destination="X2i-ZL-0al" kind="relationship" relationship="viewControllers" id="YpR-pY-ikf"/>
+                        <segue destination="KQL-d6-KO5" kind="relationship" relationship="viewControllers" id="Rmf-tL-VMY"/>
                         <segue destination="kIx-8W-OeH" kind="relationship" relationship="viewControllers" id="soT-Qe-wcd"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAx-iJ-RUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1327" y="10"/>
         </scene>
@@ -107,7 +101,7 @@
         <!--Attributes-->
         <scene sceneID="tPp-fe-kxS">
             <objects>
-                <viewController id="8WY-A0-ldB" sceneMemberID="viewController">
+                <viewController id="8WY-A0-ldB" customClass="AttributesTableViewController" customModule="ExcelMock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="H0g-PG-mdb"/>
                         <viewControllerLayoutGuide type="bottom" id="7P8-Hi-kye"/>
@@ -141,6 +135,9 @@
                     <navigationItem key="navigationItem" title="Attributes" id="zB6-HA-iHP">
                         <barButtonItem key="rightBarButtonItem" title="i" id="zC0-RV-4rq"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="attributesTable" destination="lJw-gD-NBd" id="kyK-8z-Sj0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfK-dH-Rlj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,7 +165,7 @@
         <!--Formulas-->
         <scene sceneID="TdV-js-aGb">
             <objects>
-                <viewController id="Cnj-JQ-xqv" sceneMemberID="viewController">
+                <viewController id="Cnj-JQ-xqv" customClass="FormulasTableViewController" customModule="ExcelMock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Yc-ZX-B6x"/>
                         <viewControllerLayoutGuide type="bottom" id="L3n-6e-58g"/>
@@ -201,6 +198,9 @@
                     <navigationItem key="navigationItem" title="Formulas" id="9QX-Mq-YgI">
                         <barButtonItem key="rightBarButtonItem" title="i" id="d3F-2l-i1B"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="formulasTable" destination="7uP-k7-qbB" id="wVf-9Z-XAk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAI-b4-oij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
