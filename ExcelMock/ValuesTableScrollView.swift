@@ -24,14 +24,13 @@ class ValuesTableScrollView: UIScrollView {
     }
     
     init (frame : CGRect, columnArray : [ColumnModel]){
+        
         super.init(frame: frame)
         registerDelgates()
-        
-        let scrollViewWidth:CGFloat = frame.width
         mainColumnArray = columnArray
+        
         for index in (0...columnArray.count - 1){
-            let newWidth = scrollViewWidth * CGFloat(index)
-            let tablePage = DataTable.init(frame: CGRect(x: newWidth, y: 0, width: frame.size.width, height: frame.height))
+            let tablePage = DataTable.init(frame: CGRect(x: frame.width * CGFloat(index), y: 0, width: frame.size.width, height: frame.height))
             tablePage.index = index
             regsiterDelegatesAndCellsForTable(table: tablePage)
             tableArray.append(tablePage)
@@ -58,8 +57,8 @@ extension ValuesTableScrollView : TableAdjustable {
     
     func addToTableAtIndex(index: Int){
         currentTableIndex = index
-        mainColumnArray[index].dataArray.insert("", at: 0)
         for element in tableArray{
+            mainColumnArray[element.index].dataArray.insert("", at: 0)
             element.reloadData()
         }
         

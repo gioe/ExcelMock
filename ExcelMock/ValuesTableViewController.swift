@@ -9,7 +9,8 @@
 import UIKit
 
 class ValuesTableViewController: UIViewController {
-    
+    let kSplitConstant = "Split"
+    let kUnsplitConstant = "Unsplit"
     var columnArray : [ColumnModel] = []
     var currentTableIndex : Int = 0
     
@@ -55,9 +56,9 @@ class ValuesTableViewController: UIViewController {
     }
     
     func refreshTable(){
-        if (headerView.pinButton.titleLabel?.text == "Pin"){
+        if (headerView.pinButton.titleLabel?.text == kSplitConstant){
             
-            headerView.pinButton.setTitle("Unpin", for: .normal)
+            headerView.pinButton.setTitle(kUnsplitConstant, for: .normal)
 
             mainScrollView.removeFromSuperview()
 
@@ -72,7 +73,7 @@ class ValuesTableViewController: UIViewController {
             
         } else {
             
-            headerView.pinButton.setTitle("Pin", for: .normal)
+            headerView.pinButton.setTitle(kSplitConstant, for: .normal)
 
             secondScrollView.removeFromSuperview()
             mainScrollView.removeFromSuperview()
@@ -96,5 +97,6 @@ extension ValuesTableViewController : UIScrollViewDelegate{
         let currentPage:CGFloat = floor((scrollView.contentOffset.x-pageWidth/2)/pageWidth)+1
         headerView.headerLabel.text = columnArray[Int(currentPage)].title
         currentTableIndex = Int(currentPage)
+        mainScrollView.currentTableIndex = Int(currentPage)
     }
 }
