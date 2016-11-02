@@ -11,22 +11,22 @@ import UIKit
 class DataScrollView : UIScrollView {
     
     var tableArray : [DataTable] = []
-    var mainColumnArray : [ColumnModel] = []
+    var mainRowArray : [RowModel] = []
     var currentTableIndex : Int = 0
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init (frame : CGRect, columnArray : [ColumnModel]){
+    init (frame : CGRect, rowArray : [RowModel]){
         
         super.init(frame: frame)
-        mainColumnArray = columnArray
+        mainRowArray = rowArray
         
-        for index in (0...columnArray.count - 1){
+        for index in (0...highestColumnNumber(rowArray: mainRowArray)){
             let tablePage = DataTable.init()
             tablePage.index = index
-            regsiterDelegatesAndCellsForTable(tablePage)
+            registerDelegatesAndCellsForTable(tablePage)
             tableArray.append(tablePage)
             addSubview(tablePage)
         }
@@ -36,24 +36,34 @@ class DataScrollView : UIScrollView {
     
     override func layoutSubviews() {
         let viewsArray = subviews
-        for index in (0...mainColumnArray.count - 1){
+        for index in (0...mainRowArray[0].cellArray.count - 1){
             if viewsArray[index] is DataTable{
                 let currentView = viewsArray[index] as! DataTable
                 currentView.frame = CGRect(x: bounds.width * CGFloat(index), y: 0, width: bounds.width, height: bounds.height)
             }
         }
     
-        contentSize = CGSize(width: bounds.width * CGFloat(mainColumnArray.count), height: bounds.height)
+        contentSize = CGSize(width: bounds.width * CGFloat(mainRowArray[0].cellArray.count), height: bounds.height)
         super.layoutSubviews()
         
     }
     
     
-    func regsiterDelegatesAndCellsForTable(_ table : DataTable){
+    func registerDelegatesAndCellsForTable(_ table : DataTable){
         table.register(ExcelCellTableViewCell.self)
         table.dataSource = self
         table.delegate = self
 
+    }
+    
+    func highestColumnNumber(rowArray : [RowModel]) -> Int {
+        var columnArray : [Int] = []
+        for row in rowArray {
+            columnArray.append(row.cellArray.count)
+        }
+        
+        return columnArray.max()! - 1
+        
     }
     
 }
@@ -62,17 +72,8 @@ class DataScrollView : UIScrollView {
 extension DataScrollView : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        let cell = tableView.cellForRow(at: indexPath) as! ExcelCellTableViewCell
-        UIView.animate(withDuration: 0.25, delay: 0.0, options: [], animations: {
-            
-            cell.transform = CGAffineTransform(scaleX: 1.6, y: 1.6)
-            
-        }, completion: { (finished: Bool) in
-            
+                
         
-            
-        })
-
     }
 }
 
@@ -80,15 +81,26 @@ extension DataScrollView : UITableViewDelegate {
 extension DataScrollView : UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let currentTableView = tableView as! DataTable
-        return mainColumnArray[currentTableView.index].dataArray.count
+//        let currentTableView = tableView as! DataTable
+        return mainRowArray.count
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentTableView = tableView as! DataTable
 
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as ExcelCellTableViewCell
-        cell.setCellText(mainColumnArray[currentTableView.index].dataArray[indexPath.row])
+        let row = mainRowArray[indexPath.row]
+        let cellArray = row.cellArray
+        
+        if currentTableView.index > (cellArray.count - 1){
+             cell.setCellText("")
+        } else {
+            let cellString = cellArray[currentTableView.index]
+            cell.setCellText(cellString.data)
+        }
+       
+
         return cell
     
     }

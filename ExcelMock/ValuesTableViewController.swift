@@ -28,10 +28,10 @@ class ValuesTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        headerView.headerLabel.text = TableModel().columnArray[0].title
-        mainScrollView = DataScrollView.init(frame: CGRect(x: 0, y: 124, width: view.frame.size.width, height: view.frame.size.height), columnArray: columnArray)
-        mainScrollView.delegate = self
-        view.addSubview(mainScrollView)
+//        headerView.headerLabel.text = TableModel().columnArray[0].title
+//        mainScrollView = DataScrollView.init(frame: CGRect(x: 0, y: 124, width: view.frame.size.width, height: view.frame.size.height), rowArray: columnArray)
+//        mainScrollView.delegate = self
+//        view.addSubview(mainScrollView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,10 +41,10 @@ class ValuesTableViewController: UIViewController {
     func refreshTable(){
         mainScrollView.removeFromSuperview()
 
-        mainScrollView = DataScrollView.init(frame: CGRect(x: 0, y: 124, width: view.frame.size.width, height: view.frame.size.height), columnArray: columnArray)
-        mainScrollView.contentOffset = CGPoint(x: mainScrollView.frame.size.width * CGFloat(currentTableIndex), y: 0)
-
-        view.addSubview(mainScrollView)
+//        mainScrollView = DataScrollView.init(frame: CGRect(x: 0, y: 124, width: view.frame.size.width, height: view.frame.size.height), rowArray: columnArray)
+//        mainScrollView.contentOffset = CGPoint(x: mainScrollView.frame.size.width * CGFloat(currentTableIndex), y: 0)
+//
+//        view.addSubview(mainScrollView)
         
     }
 

@@ -9,6 +9,12 @@
 import UIKit
 class TableSheetsViewController: UIViewController {
 
+    var dataTable : DataModel? {
+        didSet{
+            setupScroll()
+        }
+    }
+    
     var singleTap : UITapGestureRecognizer = UITapGestureRecognizer()
     var pinchGesture : UIPinchGestureRecognizer = UIPinchGestureRecognizer()
     var finishedAnimation : Bool = false
@@ -17,9 +23,7 @@ class TableSheetsViewController: UIViewController {
     var oldHeaderFrame : CGRect?
 
     var oldTableFrame : CGRect?
-
-
-     var interactiveTransition: UIPercentDrivenInteractiveTransition!
+    var interactiveTransition: UIPercentDrivenInteractiveTransition!
     
     @IBOutlet var swipeableTableView: UIScrollView! {
         didSet{
@@ -34,7 +38,6 @@ class TableSheetsViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        setupScroll()
 
     }
 
@@ -47,7 +50,9 @@ class TableSheetsViewController: UIViewController {
     func setupScroll(){
         
         for index in (0...4){
-            let tableView = SheetsView.init(frame: CGRect(x: view.bounds.width * CGFloat(index), y: 0, width: view.bounds.width - 150, height: view.bounds.height - 150 ))
+            let tableView = SheetsView.init(frame: CGRect(x: view.bounds.width * CGFloat(index), y: 0, width: view.bounds.width - 150, height: view.bounds.height - 150 ), data: dataTable!)
+            tableView.layer.borderWidth = 3
+            tableView.layer.borderColor = UIColor.black.cgColor
             tableView.index = index
     
             singleTap = UITapGestureRecognizer(target: self, action: #selector(TableSheetsViewController.handleSelection(sender:)))
@@ -91,7 +96,7 @@ class TableSheetsViewController: UIViewController {
     func handleDismiss(sender: AnyObject){
         let gestureRecognizer = sender as! UIPinchGestureRecognizer
         let currentView = gestureRecognizer.view as! SheetsView
-        currentView.headerLabel!.text = TableModel().columnArray[0].title
+//        currentView.headerLabel!.text = TableModel().columnArray[0].title
         UIView.animate(withDuration: 0.25, delay: 0.0, options: [], animations: {
             
            currentView.frame = self.oldViewFrame!

@@ -10,6 +10,7 @@ import UIKit
 
 class SheetsView: UIView {
 
+    var dataTable : DataModel?
     var view: UIView!
     var columnArray : [ColumnModel] = []
     var index : Int = 0
@@ -17,14 +18,14 @@ class SheetsView: UIView {
     var tablePage : DataScrollView!
     
     
-    override init(frame: CGRect){
+    init(frame: CGRect, data: DataModel){
         super.init(frame:frame)
+        self.dataTable = data
         headerLabel =  UILabel.init()
         headerLabel.textAlignment = .center
-        headerLabel.text = TableModel().columnArray[0].title
         addSubview(headerLabel)
         
-        tablePage = DataScrollView.init(frame: CGRect(x: 0, y: headerLabel.frame.origin.y + headerLabel.bounds.height, width: frame.width, height: bounds.height - headerLabel.bounds.height), columnArray: TableModel().columnArray)
+        tablePage = DataScrollView.init(frame:  CGRect(x: 0, y: headerLabel.frame.origin.y + headerLabel.bounds.height, width: frame.width, height: bounds.height - headerLabel.bounds.height), rowArray: (dataTable?.rowArray)!)
         tablePage.isScrollEnabled = false
         addSubview(tablePage)
         

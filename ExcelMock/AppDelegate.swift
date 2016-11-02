@@ -46,7 +46,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
             do {
                 let contents = try String(contentsOf: url)
-                let sessionData = DataModel.init(commaSeparatedData: contents.components(separatedBy: ","))
+                
+            
+                let rootViewController = window?.rootViewController as! TableSheetsViewController
+                rootViewController.dataTable  = DataModel.init(commaSeparatedData: contents.components(separatedBy: ","))
                 
             } catch {
                 //send xlsx to API for parsing
