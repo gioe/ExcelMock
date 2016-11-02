@@ -13,8 +13,6 @@ protocol NibLoadableView: class { }
 extension NibLoadableView where Self: UIView {
     
     static var nibName: String {
-        // notice the new describing here
-        // now only one place to refactor if describing is removed in the future
         return String(describing: self)
     }
     
@@ -27,20 +25,20 @@ class ExcelCellTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
    
-    func setCellText(text : String){
+    func setCellText(_ text : String){
         dataLabel.text = text
     }
     
 }
 
 extension UITableViewCell: NibLoadableView { }
-
 
 protocol ReusableView: class {}
 

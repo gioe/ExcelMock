@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-ExcelMock.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ExcelMockTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ExcelMockUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftCSV.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>13DFD179162B5EB85EC7C06CDFAA0C1C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>22326D95D203FC90248BCCD8E7BE62CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5A72C0CB635FE37D17240CD9177FD2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC5109E9FD1FC059DCB8636F1E506A6B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

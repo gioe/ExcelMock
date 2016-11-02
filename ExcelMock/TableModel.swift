@@ -12,6 +12,8 @@ class TableModel: NSObject {
     
     var tag : Int = 0;
     var columnArray : [ColumnModel] = [];
+    var tableTitleArray : [String] = [];
+
     
     override init(){
         let column1 = ColumnModel.init(title: "Names", dataArray:["Evangelina Pearlman", "Arthur Prange", "Pok Gillogly", "Filomena Mcalpine", "Gilda Pettaway", "Raymon Westendorf", "Margarette McKim", "Buster Douglas",

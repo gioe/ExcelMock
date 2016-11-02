@@ -1,0 +1,6 @@
+framework module Pods_ExcelMock {
+  umbrella header "Pods-ExcelMock-umbrella.h"
+
+  export *
+  module * { export * }
+}

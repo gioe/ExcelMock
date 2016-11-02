@@ -12,8 +12,6 @@ class TableHeaderView: UIView {
 
     var view: UIView!
     @IBOutlet weak var headerLabel: UILabel!
-    @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var pinButton: UIButton!
     
     override init(frame: CGRect){
         super.init(frame:frame)

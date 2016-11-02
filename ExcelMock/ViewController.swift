@@ -44,7 +44,7 @@ extension ViewController: UITableViewDataSource{
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = mainTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ExcelCellTableViewCell
-        cell.setCellText(text: String(numberArray[indexPath.row]))
+        cell.setCellText(String(numberArray[indexPath.row]))
         return cell
     }
     

@@ -1,0 +1,849 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D6AF5596994F1D2FD391DFE3DFCADE3 /* Pods-ExcelMockTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 81BD7D754350C0E8479B34EE15D59E4B /* Pods-ExcelMockTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20382F1BBABD6599F31EF34070763E01 /* Pods-ExcelMock-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A84814FDA6867FD96826CD8DD87C9F /* Pods-ExcelMock-dummy.m */; };
+		3AB3BCE0E230CCE0471BC2065B22169D /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680E84E9F507120C0F7F7D34B12B715 /* CSV.swift */; };
+		3EB5DFFB52654C96771D079F16E869EE /* Pods-ExcelMock-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 705D975E8B3BCCE012EF5FEE57DC179D /* Pods-ExcelMock-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CF97E11FE5DD7AA7C6B098C2AA48C64 /* ParserHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6F5CBE16E69A4FF97A32EE95386DB7 /* ParserHelpers.swift */; };
+		522AE3C9D0AF30FB2CBB3208FE7E95B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		5AD3595845A959021D03267ABEAAA17F /* SwiftCSV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51892CD0FE6244B00E4C261A274B5030 /* SwiftCSV-dummy.m */; };
+		5F09FDC2BBC208FF4657325F17FA3382 /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D33FDE60B2ADA04E42E8076F0934 /* String+Lines.swift */; };
+		6B8EF15ECA888281DE28C6D05FAF0385 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2527E5D71CEA1536CF32FEFE7C16D0 /* Parser.swift */; };
+		769F57C30E5E3FCE724CA41862B9E59F /* Pods-ExcelMockUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 618A79CB62AA20BED76BA11D382B35EA /* Pods-ExcelMockUITests-dummy.m */; };
+		7B4813C2D929B383476631BE26A02817 /* Pods-ExcelMockTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85529799C8186F5F2FD846151306D6C1 /* Pods-ExcelMockTests-dummy.m */; };
+		868EDB26277AFE0F9B759ED1A6B756E6 /* SwiftCSV-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9F9BB11E1E262432C55079F62A254A /* SwiftCSV-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CEC9A403469A94F606EBD090F103E37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		C367571F32E021D9442BD3EE6D766EB4 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E85886C49DC04E314AC91BF2C6BB2 /* Description.swift */; };
+		D2020500602EEC5F603036FE513966C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		D89143E4216D1E3C07BE1CC08E9A3CBA /* Pods-ExcelMockUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51CAD3F2CA288DB38845AB37C830F775 /* Pods-ExcelMockUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC19D2843F63724BA661436AD01F9901 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD76E97F5B27DE84BDAEE27A6DEA4C96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5A72C0CB635FE37D17240CD9177FD2C;
+			remoteInfo = SwiftCSV;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0680E84E9F507120C0F7F7D34B12B715 /* CSV.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSV.swift; path = SwiftCSV/CSV.swift; sourceTree = "<group>"; };
+		07B42D4F4183BEB1434470DF6BAA438E /* Pods-ExcelMockUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExcelMockUITests-resources.sh"; sourceTree = "<group>"; };
+		091604843BF4979C44326AC8B5D78D00 /* Pods-ExcelMockTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExcelMockTests-frameworks.sh"; sourceTree = "<group>"; };
+		10C0E04D92B26CEE00C5C2ED121C2BCD /* Pods_ExcelMockUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExcelMockUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41337684615C707636418554B6778642 /* Pods_ExcelMockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExcelMockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A84814FDA6867FD96826CD8DD87C9F /* Pods-ExcelMock-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExcelMock-dummy.m"; sourceTree = "<group>"; };
+		46D77C8FF5A21CBC979EB4542270D5E4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		491054C972AD77F1022DF4405CCC4F84 /* Pods-ExcelMock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExcelMock.release.xcconfig"; sourceTree = "<group>"; };
+		4A2527E5D71CEA1536CF32FEFE7C16D0 /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = SwiftCSV/Parser.swift; sourceTree = "<group>"; };
+		4A6A7E6ADD0D526AB5AA45BCD0C255E1 /* Pods-ExcelMockUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExcelMockUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		51892CD0FE6244B00E4C261A274B5030 /* SwiftCSV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftCSV-dummy.m"; sourceTree = "<group>"; };
+		51CAD3F2CA288DB38845AB37C830F775 /* Pods-ExcelMockUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExcelMockUITests-umbrella.h"; sourceTree = "<group>"; };
+		55E9B5C2DB62427692E298618CE275A2 /* Pods-ExcelMockTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExcelMockTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		56A346AD1923C03FC677B557785F5EBF /* Pods-ExcelMock-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExcelMock-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5865DD993D3FBD52C078767CC274B26A /* Pods-ExcelMock-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExcelMock-frameworks.sh"; sourceTree = "<group>"; };
+		618A79CB62AA20BED76BA11D382B35EA /* Pods-ExcelMockUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExcelMockUITests-dummy.m"; sourceTree = "<group>"; };
+		6E9F9BB11E1E262432C55079F62A254A /* SwiftCSV-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCSV-umbrella.h"; sourceTree = "<group>"; };
+		705D975E8B3BCCE012EF5FEE57DC179D /* Pods-ExcelMock-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExcelMock-umbrella.h"; sourceTree = "<group>"; };
+		742E4D99C77EE60FBAB26DCCC40C38EE /* Pods-ExcelMockUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExcelMockUITests.release.xcconfig"; sourceTree = "<group>"; };
+		81BD7D754350C0E8479B34EE15D59E4B /* Pods-ExcelMockTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExcelMockTests-umbrella.h"; sourceTree = "<group>"; };
+		848E85886C49DC04E314AC91BF2C6BB2 /* Description.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Description.swift; path = SwiftCSV/Description.swift; sourceTree = "<group>"; };
+		85529799C8186F5F2FD846151306D6C1 /* Pods-ExcelMockTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExcelMockTests-dummy.m"; sourceTree = "<group>"; };
+		86F5F90C39B3A9DAA6D8C2143DCB8AD0 /* Pods-ExcelMockUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExcelMockUITests-frameworks.sh"; sourceTree = "<group>"; };
+		876EBC8DD1C1FB99DF6D8DF480792BFF /* SwiftCSV-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCSV-prefix.pch"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95A98BD6DF596EC94F821363BEB2EDB9 /* Pods-ExcelMockTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExcelMockTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9C9C055B3B7FDB1B6F691BC50666BD46 /* Pods-ExcelMockTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExcelMockTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D261E93E662731750A67DDA26F9CD11 /* SwiftCSV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftCSV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D6F475D935562C6ADF5914400097CBE /* Pods_ExcelMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExcelMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F67E59B6C29B39F31122D509F8B563F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC5C3F9D67A790C28136ADB5DA37129C /* SwiftCSV.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftCSV.modulemap; sourceTree = "<group>"; };
+		B277531CDC8602373516FCC1BC0D1829 /* Pods-ExcelMock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExcelMock.debug.xcconfig"; sourceTree = "<group>"; };
+		B2A7056D600FC284402CA4CF61E246C5 /* Pods-ExcelMockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExcelMockTests.release.xcconfig"; sourceTree = "<group>"; };
+		BBD4A9978C77A60D57877EB95A848AA6 /* Pods-ExcelMock-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExcelMock-resources.sh"; sourceTree = "<group>"; };
+		BBDE0ED18A78474B055D2CEB97EE7491 /* Pods-ExcelMockUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExcelMockUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C19B73FE9855F90B1C1724F616530381 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB53D33FDE60B2ADA04E42E8076F0934 /* String+Lines.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Lines.swift"; path = "SwiftCSV/String+Lines.swift"; sourceTree = "<group>"; };
+		CE866801903B0A09DCB7BF3A2B2CF56A /* SwiftCSV.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftCSV.xcconfig; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D901417B48ACDFE9C55369D64B35F3FE /* Pods-ExcelMockTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExcelMockTests-resources.sh"; sourceTree = "<group>"; };
+		DB6F5CBE16E69A4FF97A32EE95386DB7 /* ParserHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParserHelpers.swift; path = SwiftCSV/ParserHelpers.swift; sourceTree = "<group>"; };
+		DEBDA6705CF2BBF20E1DDAF8AAF638DD /* Pods-ExcelMockTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ExcelMockTests.modulemap"; sourceTree = "<group>"; };
+		E8A1246BAF853E22BB014CD0DF33B334 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9836087CE801679808CB6BBA6D1523C /* Pods-ExcelMock.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ExcelMock.modulemap"; sourceTree = "<group>"; };
+		EFF8EE713794EDB205C1EEF3915F3220 /* Pods-ExcelMock-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExcelMock-acknowledgements.plist"; sourceTree = "<group>"; };
+		F764366547532D8060AAB54B61CB6104 /* Pods-ExcelMockUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ExcelMockUITests.modulemap"; sourceTree = "<group>"; };
+		FEECAB116C0A65EF12A23DC5E2EC6EAE /* Pods-ExcelMockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExcelMockUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A9C1C0378AF5221481DF0103F2177BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2020500602EEC5F603036FE513966C6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40AAE4C85F560DC5AE9A13FD568ADCBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CEC9A403469A94F606EBD090F103E37 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F311E6BE1D1629C8AB0792DD2709A98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC19D2843F63724BA661436AD01F9901 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FB740C40DD50F89BBFA2062C2183D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522AE3C9D0AF30FB2CBB3208FE7E95B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		313DDBEF03229750214743DB756B2242 /* SwiftCSV */ = {
+			isa = PBXGroup;
+			children = (
+				0680E84E9F507120C0F7F7D34B12B715 /* CSV.swift */,
+				848E85886C49DC04E314AC91BF2C6BB2 /* Description.swift */,
+				4A2527E5D71CEA1536CF32FEFE7C16D0 /* Parser.swift */,
+				DB6F5CBE16E69A4FF97A32EE95386DB7 /* ParserHelpers.swift */,
+				CB53D33FDE60B2ADA04E42E8076F0934 /* String+Lines.swift */,
+				5EEF10172FDAD3B1162776129F8BAA16 /* Support Files */,
+			);
+			path = SwiftCSV;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5EEF10172FDAD3B1162776129F8BAA16 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C19B73FE9855F90B1C1724F616530381 /* Info.plist */,
+				AC5C3F9D67A790C28136ADB5DA37129C /* SwiftCSV.modulemap */,
+				CE866801903B0A09DCB7BF3A2B2CF56A /* SwiftCSV.xcconfig */,
+				51892CD0FE6244B00E4C261A274B5030 /* SwiftCSV-dummy.m */,
+				876EBC8DD1C1FB99DF6D8DF480792BFF /* SwiftCSV-prefix.pch */,
+				6E9F9BB11E1E262432C55079F62A254A /* SwiftCSV-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftCSV";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				89E10FC368E371483BBC64405F5D1EC6 /* Pods */,
+				FA25F2AC9AB959E11A47301D8953122C /* Products */,
+				AF29C0A1F31B6B5AECCDC35399D048C5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		89E10FC368E371483BBC64405F5D1EC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				313DDBEF03229750214743DB756B2242 /* SwiftCSV */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF29C0A1F31B6B5AECCDC35399D048C5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2B5FBE6E445BC88C6CF14C11F95258B /* Pods-ExcelMock */,
+				CA2EBF14394627AA4397DB65A9277222 /* Pods-ExcelMockTests */,
+				BD8D71B84F4B83E3A90C4880ABE2E545 /* Pods-ExcelMockUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B2B5FBE6E445BC88C6CF14C11F95258B /* Pods-ExcelMock */ = {
+			isa = PBXGroup;
+			children = (
+				46D77C8FF5A21CBC979EB4542270D5E4 /* Info.plist */,
+				E9836087CE801679808CB6BBA6D1523C /* Pods-ExcelMock.modulemap */,
+				56A346AD1923C03FC677B557785F5EBF /* Pods-ExcelMock-acknowledgements.markdown */,
+				EFF8EE713794EDB205C1EEF3915F3220 /* Pods-ExcelMock-acknowledgements.plist */,
+				42A84814FDA6867FD96826CD8DD87C9F /* Pods-ExcelMock-dummy.m */,
+				5865DD993D3FBD52C078767CC274B26A /* Pods-ExcelMock-frameworks.sh */,
+				BBD4A9978C77A60D57877EB95A848AA6 /* Pods-ExcelMock-resources.sh */,
+				705D975E8B3BCCE012EF5FEE57DC179D /* Pods-ExcelMock-umbrella.h */,
+				B277531CDC8602373516FCC1BC0D1829 /* Pods-ExcelMock.debug.xcconfig */,
+				491054C972AD77F1022DF4405CCC4F84 /* Pods-ExcelMock.release.xcconfig */,
+			);
+			name = "Pods-ExcelMock";
+			path = "Target Support Files/Pods-ExcelMock";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD8D71B84F4B83E3A90C4880ABE2E545 /* Pods-ExcelMockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E8A1246BAF853E22BB014CD0DF33B334 /* Info.plist */,
+				F764366547532D8060AAB54B61CB6104 /* Pods-ExcelMockUITests.modulemap */,
+				BBDE0ED18A78474B055D2CEB97EE7491 /* Pods-ExcelMockUITests-acknowledgements.markdown */,
+				4A6A7E6ADD0D526AB5AA45BCD0C255E1 /* Pods-ExcelMockUITests-acknowledgements.plist */,
+				618A79CB62AA20BED76BA11D382B35EA /* Pods-ExcelMockUITests-dummy.m */,
+				86F5F90C39B3A9DAA6D8C2143DCB8AD0 /* Pods-ExcelMockUITests-frameworks.sh */,
+				07B42D4F4183BEB1434470DF6BAA438E /* Pods-ExcelMockUITests-resources.sh */,
+				51CAD3F2CA288DB38845AB37C830F775 /* Pods-ExcelMockUITests-umbrella.h */,
+				FEECAB116C0A65EF12A23DC5E2EC6EAE /* Pods-ExcelMockUITests.debug.xcconfig */,
+				742E4D99C77EE60FBAB26DCCC40C38EE /* Pods-ExcelMockUITests.release.xcconfig */,
+			);
+			name = "Pods-ExcelMockUITests";
+			path = "Target Support Files/Pods-ExcelMockUITests";
+			sourceTree = "<group>";
+		};
+		CA2EBF14394627AA4397DB65A9277222 /* Pods-ExcelMockTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F67E59B6C29B39F31122D509F8B563F /* Info.plist */,
+				DEBDA6705CF2BBF20E1DDAF8AAF638DD /* Pods-ExcelMockTests.modulemap */,
+				95A98BD6DF596EC94F821363BEB2EDB9 /* Pods-ExcelMockTests-acknowledgements.markdown */,
+				55E9B5C2DB62427692E298618CE275A2 /* Pods-ExcelMockTests-acknowledgements.plist */,
+				85529799C8186F5F2FD846151306D6C1 /* Pods-ExcelMockTests-dummy.m */,
+				091604843BF4979C44326AC8B5D78D00 /* Pods-ExcelMockTests-frameworks.sh */,
+				D901417B48ACDFE9C55369D64B35F3FE /* Pods-ExcelMockTests-resources.sh */,
+				81BD7D754350C0E8479B34EE15D59E4B /* Pods-ExcelMockTests-umbrella.h */,
+				9C9C055B3B7FDB1B6F691BC50666BD46 /* Pods-ExcelMockTests.debug.xcconfig */,
+				B2A7056D600FC284402CA4CF61E246C5 /* Pods-ExcelMockTests.release.xcconfig */,
+			);
+			name = "Pods-ExcelMockTests";
+			path = "Target Support Files/Pods-ExcelMockTests";
+			sourceTree = "<group>";
+		};
+		FA25F2AC9AB959E11A47301D8953122C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D6F475D935562C6ADF5914400097CBE /* Pods_ExcelMock.framework */,
+				41337684615C707636418554B6778642 /* Pods_ExcelMockTests.framework */,
+				10C0E04D92B26CEE00C5C2ED121C2BCD /* Pods_ExcelMockUITests.framework */,
+				9D261E93E662731750A67DDA26F9CD11 /* SwiftCSV.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		49058A8234F1FD071BF790FDA1944924 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB5DFFB52654C96771D079F16E869EE /* Pods-ExcelMock-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CB4A34D72EE8D9FECD7B8BD3EDB7286 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				868EDB26277AFE0F9B759ED1A6B756E6 /* SwiftCSV-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9750A56140F47FEF13F6D09480340650 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D89143E4216D1E3C07BE1CC08E9A3CBA /* Pods-ExcelMockUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6D18479B63FB28E47D6C9743FA7F3FC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D6AF5596994F1D2FD391DFE3DFCADE3 /* Pods-ExcelMockTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		13DFD179162B5EB85EC7C06CDFAA0C1C /* Pods-ExcelMockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEDA996679A220A38300E93DFCEBF144 /* Build configuration list for PBXNativeTarget "Pods-ExcelMockUITests" */;
+			buildPhases = (
+				A1F1FC8481F12361B55AA73B7E05BB06 /* Sources */,
+				A7FB740C40DD50F89BBFA2062C2183D3 /* Frameworks */,
+				9750A56140F47FEF13F6D09480340650 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ExcelMockUITests";
+			productName = "Pods-ExcelMockUITests";
+			productReference = 10C0E04D92B26CEE00C5C2ED121C2BCD /* Pods_ExcelMockUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		22326D95D203FC90248BCCD8E7BE62CF /* Pods-ExcelMock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59942DD7668F55C3057C52C82977420F /* Build configuration list for PBXNativeTarget "Pods-ExcelMock" */;
+			buildPhases = (
+				7E9167595DF9001A50D68B054D9FAF6D /* Sources */,
+				3A9C1C0378AF5221481DF0103F2177BE /* Frameworks */,
+				49058A8234F1FD071BF790FDA1944924 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				524C4FBC34ECE53098A742E537C7EEED /* PBXTargetDependency */,
+			);
+			name = "Pods-ExcelMock";
+			productName = "Pods-ExcelMock";
+			productReference = 9D6F475D935562C6ADF5914400097CBE /* Pods_ExcelMock.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A5A72C0CB635FE37D17240CD9177FD2C /* SwiftCSV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A60A934FA5CDBED7258F908AF10710 /* Build configuration list for PBXNativeTarget "SwiftCSV" */;
+			buildPhases = (
+				8BF43A0103330382DC0EDE93F6A87E8C /* Sources */,
+				5F311E6BE1D1629C8AB0792DD2709A98 /* Frameworks */,
+				8CB4A34D72EE8D9FECD7B8BD3EDB7286 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftCSV;
+			productName = SwiftCSV;
+			productReference = 9D261E93E662731750A67DDA26F9CD11 /* SwiftCSV.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EC5109E9FD1FC059DCB8636F1E506A6B /* Pods-ExcelMockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E774396D982B8ADFB6259C444FF43CE /* Build configuration list for PBXNativeTarget "Pods-ExcelMockTests" */;
+			buildPhases = (
+				21194E3954E776F03785D6791E425CB4 /* Sources */,
+				40AAE4C85F560DC5AE9A13FD568ADCBE /* Frameworks */,
+				C6D18479B63FB28E47D6C9743FA7F3FC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ExcelMockTests";
+			productName = "Pods-ExcelMockTests";
+			productReference = 41337684615C707636418554B6778642 /* Pods_ExcelMockTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					22326D95D203FC90248BCCD8E7BE62CF = {
+						LastSwiftMigration = 0810;
+					};
+					A5A72C0CB635FE37D17240CD9177FD2C = {
+						LastSwiftMigration = 0810;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FA25F2AC9AB959E11A47301D8953122C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22326D95D203FC90248BCCD8E7BE62CF /* Pods-ExcelMock */,
+				EC5109E9FD1FC059DCB8636F1E506A6B /* Pods-ExcelMockTests */,
+				13DFD179162B5EB85EC7C06CDFAA0C1C /* Pods-ExcelMockUITests */,
+				A5A72C0CB635FE37D17240CD9177FD2C /* SwiftCSV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21194E3954E776F03785D6791E425CB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B4813C2D929B383476631BE26A02817 /* Pods-ExcelMockTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E9167595DF9001A50D68B054D9FAF6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20382F1BBABD6599F31EF34070763E01 /* Pods-ExcelMock-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BF43A0103330382DC0EDE93F6A87E8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AB3BCE0E230CCE0471BC2065B22169D /* CSV.swift in Sources */,
+				C367571F32E021D9442BD3EE6D766EB4 /* Description.swift in Sources */,
+				6B8EF15ECA888281DE28C6D05FAF0385 /* Parser.swift in Sources */,
+				4CF97E11FE5DD7AA7C6B098C2AA48C64 /* ParserHelpers.swift in Sources */,
+				5F09FDC2BBC208FF4657325F17FA3382 /* String+Lines.swift in Sources */,
+				5AD3595845A959021D03267ABEAAA17F /* SwiftCSV-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1F1FC8481F12361B55AA73B7E05BB06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				769F57C30E5E3FCE724CA41862B9E59F /* Pods-ExcelMockUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		524C4FBC34ECE53098A742E537C7EEED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftCSV;
+			target = A5A72C0CB635FE37D17240CD9177FD2C /* SwiftCSV */;
+			targetProxy = DD76E97F5B27DE84BDAEE27A6DEA4C96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		034014829C1E4434983CF3A690C12017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3F073C2E40145E7F288668C7646E2C36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C9C055B3B7FDB1B6F691BC50666BD46 /* Pods-ExcelMockTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExcelMockTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ExcelMockTests/Pods-ExcelMockTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ExcelMockTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		592A17FE18A1CFA5B804E011894899A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE866801903B0A09DCB7BF3A2B2CF56A /* SwiftCSV.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftCSV/SwiftCSV-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftCSV/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftCSV/SwiftCSV.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftCSV;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		899847F47455B106AF10B5FE6D9A95AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2A7056D600FC284402CA4CF61E246C5 /* Pods-ExcelMockTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExcelMockTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ExcelMockTests/Pods-ExcelMockTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ExcelMockTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8B4915F351D7D354AC10AB46F64C8A0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B277531CDC8602373516FCC1BC0D1829 /* Pods-ExcelMock.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExcelMock/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ExcelMock/Pods-ExcelMock.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ExcelMock;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AEC291FD5E7C4163D55AB0F66B7200B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 742E4D99C77EE60FBAB26DCCC40C38EE /* Pods-ExcelMockUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExcelMockUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ExcelMockUITests/Pods-ExcelMockUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ExcelMockUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C72CBF40ACB34AD220FEEF9855F5F3A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEECAB116C0A65EF12A23DC5E2EC6EAE /* Pods-ExcelMockUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExcelMockUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ExcelMockUITests/Pods-ExcelMockUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ExcelMockUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F42C8675AA43C9B457D8E48A127FC04F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 491054C972AD77F1022DF4405CCC4F84 /* Pods-ExcelMock.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExcelMock/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ExcelMock/Pods-ExcelMock.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ExcelMock;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FBDF1743BD3C0AC368189B924E6F7864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE866801903B0A09DCB7BF3A2B2CF56A /* SwiftCSV.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftCSV/SwiftCSV-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftCSV/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftCSV/SwiftCSV.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftCSV;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034014829C1E4434983CF3A690C12017 /* Debug */,
+				C7E474A03CAE21F1CB6046E7344C59BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E774396D982B8ADFB6259C444FF43CE /* Build configuration list for PBXNativeTarget "Pods-ExcelMockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F073C2E40145E7F288668C7646E2C36 /* Debug */,
+				899847F47455B106AF10B5FE6D9A95AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59942DD7668F55C3057C52C82977420F /* Build configuration list for PBXNativeTarget "Pods-ExcelMock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B4915F351D7D354AC10AB46F64C8A0C /* Debug */,
+				F42C8675AA43C9B457D8E48A127FC04F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75A60A934FA5CDBED7258F908AF10710 /* Build configuration list for PBXNativeTarget "SwiftCSV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBDF1743BD3C0AC368189B924E6F7864 /* Debug */,
+				592A17FE18A1CFA5B804E011894899A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEDA996679A220A38300E93DFCEBF144 /* Build configuration list for PBXNativeTarget "Pods-ExcelMockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C72CBF40ACB34AD220FEEF9855F5F3A5 /* Debug */,
+				AEC291FD5E7C4163D55AB0F66B7200B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
