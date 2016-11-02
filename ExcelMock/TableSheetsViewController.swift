@@ -49,8 +49,8 @@ class TableSheetsViewController: UIViewController {
 
     func setupScroll(){
         
-        for index in (0...4){
-            let tableView = SheetsView.init(frame: CGRect(x: view.bounds.width * CGFloat(index), y: 0, width: view.bounds.width - 150, height: view.bounds.height - 150 ), data: dataTable!)
+        for index in (0...dataTable!.numberOfSheets){
+            let tableView = SheetsView.init(frame: CGRect(x: view.bounds.width * CGFloat(index), y: 0, width: view.bounds.width - 100, height: view.bounds.height - 100 ), data: dataTable!)
             tableView.layer.borderWidth = 3
             tableView.layer.borderColor = UIColor.black.cgColor
             tableView.index = index
@@ -59,17 +59,13 @@ class TableSheetsViewController: UIViewController {
             singleTap.numberOfTapsRequired = 1
             tableView.addGestureRecognizer(singleTap)
             
-            pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(TableSheetsViewController.handleDismiss(sender:)))
-            tableView.addGestureRecognizer(pinchGesture)
-        
             tableView.center.x = view.center.x + (view.bounds.width * CGFloat(index))
             tableView.center.y = view.center.y
             swipeableTableView.addSubview(tableView)
             
         }
         
-        swipeableTableView.contentSize = CGSize(width: swipeableTableView.frame.width * 5, height: swipeableTableView.frame.height)
-
+        swipeableTableView.contentSize = CGSize(width: swipeableTableView.frame.width * CGFloat(dataTable!.numberOfSheets), height: swipeableTableView.frame.height)
 
     }
     
@@ -77,18 +73,21 @@ class TableSheetsViewController: UIViewController {
         let gestureRecognizer = sender as! UITapGestureRecognizer
         let currentTable = gestureRecognizer.view as! SheetsView
         
-        currentTable.headerLabel!.text = ""
         UIView.animate(withDuration: 0.25, delay: 0.0, options: [], animations: {
             self.oldViewFrame = currentTable.frame
             currentTable.frame = CGRect(x: self.swipeableTableView.contentOffset.x, y: 20, width: self.view.bounds.width, height: self.view.bounds.height)
             
         }, completion: { (finished: Bool) in
             currentTable.removeGestureRecognizer(gestureRecognizer)
+            
+            self.pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(TableSheetsViewController.handleDismiss(sender:)))
+            currentTable.addGestureRecognizer(self.pinchGesture)
+            
             self.swipeableTableView.isScrollEnabled = false
             
-            currentTable.tablePage.isScrollEnabled = true
-            currentTable.tablePage.isPagingEnabled = true
             currentTable.tablePage.isUserInteractionEnabled = true
+            currentTable.tablePage.isPagingEnabled = true
+
             
         })
     }
@@ -96,19 +95,20 @@ class TableSheetsViewController: UIViewController {
     func handleDismiss(sender: AnyObject){
         let gestureRecognizer = sender as! UIPinchGestureRecognizer
         let currentView = gestureRecognizer.view as! SheetsView
-//        currentView.headerLabel!.text = TableModel().columnArray[0].title
         UIView.animate(withDuration: 0.25, delay: 0.0, options: [], animations: {
             
            currentView.frame = self.oldViewFrame!
      
         }, completion: { (finished: Bool) in
-            
+
+            currentView.removeGestureRecognizer(gestureRecognizer)
+
             self.singleTap = UITapGestureRecognizer(target: self, action: #selector(TableSheetsViewController.handleSelection(sender:)))
             self.singleTap.numberOfTapsRequired = 1
             currentView.addGestureRecognizer(self.singleTap)
             self.swipeableTableView.isScrollEnabled = true
-            currentView.tablePage.isScrollEnabled = false
-            currentView.tablePage.isPagingEnabled = false
+            currentView.tablePage.isUserInteractionEnabled = false
+            currentView.tablePage.contentOffset = CGPoint(x: 0, y: 0)
             
         })
 

@@ -35,16 +35,17 @@ class DataScrollView : UIScrollView {
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
+
         let viewsArray = subviews
-        for index in (0...mainRowArray[0].cellArray.count - 1){
+        for index in (0...viewsArray.count - 1){
             if viewsArray[index] is DataTable{
                 let currentView = viewsArray[index] as! DataTable
                 currentView.frame = CGRect(x: bounds.width * CGFloat(index), y: 0, width: bounds.width, height: bounds.height)
             }
         }
     
-        contentSize = CGSize(width: bounds.width * CGFloat(mainRowArray[0].cellArray.count), height: bounds.height)
-        super.layoutSubviews()
+        contentSize = CGSize(width: bounds.width * CGFloat(viewsArray.count), height: bounds.height)
         
     }
     
@@ -81,7 +82,6 @@ extension DataScrollView : UITableViewDelegate {
 extension DataScrollView : UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        let currentTableView = tableView as! DataTable
         return mainRowArray.count
 
     }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftCSV
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -53,7 +53,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
             } catch {
                 //send xlsx to API for parsing
-                print("Contents could not be loaded")
+                print("We've found an xlsx")
+                do {
+                    Alamofire.upload(url, to: "https://excelcsv.herokuapp.com/upload").responseString { response in
+                        debugPrint(response)
+                    }
+                    
+                } catch {
+                    print("Couldn't parse the xlsx")
+
+                }
             }
 
         return true

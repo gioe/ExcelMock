@@ -26,16 +26,16 @@ class SheetsView: UIView {
         addSubview(headerLabel)
         
         tablePage = DataScrollView.init(frame:  CGRect(x: 0, y: headerLabel.frame.origin.y + headerLabel.bounds.height, width: frame.width, height: bounds.height - headerLabel.bounds.height), rowArray: (dataTable?.rowArray)!)
-        tablePage.isScrollEnabled = false
+        tablePage.isUserInteractionEnabled = false
         addSubview(tablePage)
         
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
+
         headerLabel.frame = CGRect(x:0, y: 0, width: bounds.width, height: 20)
         tablePage.frame = CGRect(x: 0, y: headerLabel.frame.origin.y + headerLabel.bounds.height, width: bounds.width, height: bounds.height - headerLabel.bounds.height)
-        tablePage.layoutIfNeeded()
-        super.layoutSubviews()
         
     }
         

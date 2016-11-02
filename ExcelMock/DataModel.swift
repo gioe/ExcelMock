@@ -10,6 +10,7 @@ import UIKit
 
 class DataModel: NSObject {
     
+    var numberOfSheets : Int = 1
     var rowArray : [RowModel] = []
     var cellArray : [CellModel] = []
     let endLineConstant = "\r\n"
