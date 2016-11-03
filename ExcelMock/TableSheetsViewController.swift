@@ -49,7 +49,7 @@ class TableSheetsViewController: UIViewController {
 
     func setupScroll(){
         
-        for index in (0...dataTable!.numberOfSheets){
+        for index in (0...dataTable!.numberOfSheets - 1){
             let tableView = SheetsView.init(frame: CGRect(x: view.bounds.width * CGFloat(index), y: 0, width: view.bounds.width - 100, height: view.bounds.height - 100 ), data: dataTable!)
             tableView.layer.borderWidth = 3
             tableView.layer.borderColor = UIColor.black.cgColor
