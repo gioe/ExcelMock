@@ -55,9 +55,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 //send xlsx to API for parsing
                 print("We've found an xlsx")
                 do {
-                    Alamofire.upload(url, to: "https://excelcsv.herokuapp.com/upload").responseString { response in
-                        debugPrint(response)
+                    
+        
+                    Alamofire.upload(
+                        multipartFormData: { multipartFormData in
+                            multipartFormData.append(url, withName: "excel")
+                    },
+                        to: "https://excelcsv.herokuapp.com/upload",
+                        encodingCompletion: { encodingResult in
+                            switch encodingResult {
+                            case .success(let upload, _, _):
+                                upload.responseString { response in
+                                    debugPrint(response)
+                                }
+                            case .failure(let encodingError):
+                                print(encodingError)
+                            }
                     }
+                    )
+                    
                     
                 } catch {
                     print("Couldn't parse the xlsx")
