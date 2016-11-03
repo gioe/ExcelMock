@@ -73,7 +73,14 @@ class DataScrollView : UIScrollView {
 extension DataScrollView : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-                
+        let cell = tableView.cellForRow(at: indexPath) as! ExcelCellTableViewCell
+        if let cellText = cell.dataLabel.text{
+//            let modal = CellDataViewController.init(coder: cellText)
+//            modal.modalPresentationStyle = .overFullScreen
+            
+            //            present(modal, animated: true, completion: nil)
+            
+        }
         
     }
 }
