@@ -13,7 +13,8 @@ class DataScrollView : UIScrollView {
     var tableArray : [DataTable] = []
     var mainRowArray : [RowModel] = []
     var currentTableIndex : Int = 0
-    
+    let kCellDataVcPushIdentifier = "pushDataView"
+
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -25,10 +26,13 @@ class DataScrollView : UIScrollView {
         
         for index in (0...highestColumnNumber(rowArray: mainRowArray)){
             let tablePage = DataTable.init()
+            let header = TableHeaderView.init()
             tablePage.index = index
+            header.index = index
             registerDelegatesAndCellsForTable(tablePage)
             tableArray.append(tablePage)
             addSubview(tablePage)
+            addSubview(header)
         }
         
 
@@ -38,10 +42,14 @@ class DataScrollView : UIScrollView {
         super.layoutSubviews()
 
         let viewsArray = subviews
+        
         for index in (0...viewsArray.count - 1){
             if viewsArray[index] is DataTable{
-                let currentView = viewsArray[index] as! DataTable
-                currentView.frame = CGRect(x: bounds.width * CGFloat(index), y: 0, width: bounds.width, height: bounds.height)
+                let view = viewsArray[index] as! DataTable
+                viewsArray[index].frame = CGRect(x: bounds.width * CGFloat(view.index), y: 50, width: bounds.width, height: bounds.height)
+            } else if  viewsArray[index] is TableHeaderView {
+                let view = viewsArray[index] as! TableHeaderView
+                viewsArray[index].frame = CGRect(x: bounds.width * CGFloat(view.index), y: 0, width: bounds.width, height: 50)
             }
         }
     
@@ -63,10 +71,22 @@ class DataScrollView : UIScrollView {
             columnArray.append(row.cellArray.count)
         }
         
+        
         return columnArray.max()! - 1
         
     }
     
+}
+
+extension DataScrollView : UIScrollViewDelegate {
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let view = scrollView as! DataTable
+        
+        for table in tableArray {
+            table.contentOffset = view.contentOffset
+        }
+    }
 }
 
 
@@ -74,14 +94,7 @@ extension DataScrollView : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let cell = tableView.cellForRow(at: indexPath) as! ExcelCellTableViewCell
-        if let cellText = cell.dataLabel.text{
-//            let modal = CellDataViewController.init(coder: cellText)
-//            modal.modalPresentationStyle = .overFullScreen
-            
-            //            present(modal, animated: true, completion: nil)
-            
-        }
-        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: kCellDataVcPushIdentifier), object: nil, userInfo: ["cell" : cell])
     }
 }
 

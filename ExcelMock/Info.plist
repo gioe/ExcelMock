@@ -2,25 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>CFBundleDocumentTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleTypeIconFiles</key>
-            <array/>
-            <key>CFBundleTypeName</key>
-            <string>Readings</string>
-            <key>LSItemContentTypes</key>
-            <array>
-                <string>public.comma-separated-values-text</string>
-                <string>com.microsoft.excel.xls.yaml</string>
-                <string>com.microsoft.excel.xls</string>
-                <string>com.tms.flexcel.xlsx</string>
-                <string>org.openxmlformats.spreadsheetml.sheet</string>
-            </array>
-        </dict>
-    </array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeIconFiles</key>
+			<array/>
+			<key>CFBundleTypeName</key>
+			<string>Readings</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.comma-separated-values-text</string>
+				<string>com.microsoft.excel.xls.yaml</string>
+				<string>com.microsoft.excel.xls</string>
+				<string>com.tms.flexcel.xlsx</string>
+				<string>org.openxmlformats.spreadsheetml.sheet</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -34,7 +34,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1.3</string>
+	<string>1.4.1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIFileSharingEnabled</key>

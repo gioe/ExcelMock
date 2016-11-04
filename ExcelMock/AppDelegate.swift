@@ -66,9 +66,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             switch encodingResult {
                             case .success(let upload, _, _):
                                 upload.responseString { response in
-                                    
-                                    let rootViewController = self.window?.rootViewController as! TableSheetsViewController
-                                    rootViewController.dataTable  = DataModel.init(commaSeparatedData: response.description.components(separatedBy: ","))
+                                    debugPrint(response.description)
+                                    let parsedResponse = response.description.replacingOccurrences(of: "SUCCESS: \n", with: "")
+                                    let rootViewController = self.window?.rootViewController as! UINavigationController
+                                    let visibleViewController = rootViewController.visibleViewController as! TableSheetsViewController
+                                    visibleViewController.dataTable  = DataModel.init(commaSeparatedData: parsedResponse.components(separatedBy: ","))
 
                                 }
                             case .failure(let encodingError):

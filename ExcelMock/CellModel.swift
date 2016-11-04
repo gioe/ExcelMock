@@ -10,6 +10,7 @@ import UIKit
 
 class CellModel: NSObject {
     var data : String = ""
+    var tag : (Int, Int)?
     
     init(dataString : String){
         self.data = dataString

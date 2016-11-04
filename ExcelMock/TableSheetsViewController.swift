@@ -15,14 +15,8 @@ class TableSheetsViewController: UIViewController {
         }
     }
     
-    var singleTap : UITapGestureRecognizer = UITapGestureRecognizer()
-    var pinchGesture : UIPinchGestureRecognizer = UIPinchGestureRecognizer()
-    var finishedAnimation : Bool = false
+    let kCellDataVcPushIdentifier = "pushDataView"
     var oldViewFrame : CGRect?
-    
-    var oldHeaderFrame : CGRect?
-
-    var oldTableFrame : CGRect?
     var interactiveTransition: UIPercentDrivenInteractiveTransition!
     
     @IBOutlet var swipeableTableView: UIScrollView! {
@@ -30,6 +24,7 @@ class TableSheetsViewController: UIViewController {
             swipeableTableView.showsVerticalScrollIndicator = false
             swipeableTableView.showsHorizontalScrollIndicator = false
             swipeableTableView.isDirectionalLockEnabled = true
+            swipeableTableView.isScrollEnabled = false
             swipeableTableView.isPagingEnabled = true
             swipeableTableView.bounces = false
         }
@@ -38,12 +33,38 @@ class TableSheetsViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: kCellDataVcPushIdentifier), object: nil, queue: nil, using: catchNotification)
 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func catchNotification(notification:Notification) -> Void {
+        
+        guard let userInfo = notification.userInfo,
+            let cell  = userInfo["cell"] as? ExcelCellTableViewCell else {
+                print("No userInfo found in notification")
+                return
+        }
+        
+        performSegue(withIdentifier: "showDataView", sender: cell)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDataView"{
+          let cell = sender as! ExcelCellTableViewCell
+            
+            let destinationVC = segue.destination as! UINavigationController
+            let vc = destinationVC.topViewController as! CellDataViewController
+            if cell.dataLabel.text != nil{
+                vc.dataString = cell.dataLabel.text!
+            }
+            
+        }
     }
     
 
@@ -55,9 +76,9 @@ class TableSheetsViewController: UIViewController {
             tableView.layer.borderColor = UIColor.black.cgColor
             tableView.index = index
     
-            singleTap = UITapGestureRecognizer(target: self, action: #selector(TableSheetsViewController.handleSelection(sender:)))
-            singleTap.numberOfTapsRequired = 1
-            tableView.addGestureRecognizer(singleTap)
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(TableSheetsViewController.handleSelection(sender:)))
+            tapGesture.numberOfTapsRequired = 1
+            tableView.addGestureRecognizer(tapGesture)
             
             tableView.center.x = view.center.x + (view.bounds.width * CGFloat(index))
             tableView.center.y = view.center.y
@@ -80,13 +101,23 @@ class TableSheetsViewController: UIViewController {
         }, completion: { (finished: Bool) in
             currentTable.removeGestureRecognizer(gestureRecognizer)
             
-            self.pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(TableSheetsViewController.handleDismiss(sender:)))
-            currentTable.addGestureRecognizer(self.pinchGesture)
-            
-            self.swipeableTableView.isScrollEnabled = false
-            
-            currentTable.tablePage.isUserInteractionEnabled = true
-            currentTable.tablePage.isPagingEnabled = true
+            DispatchQueue.main.async {
+                
+                if (currentTable.gestureRecognizers?.isEmpty)!{
+                    
+                    let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(TableSheetsViewController.handleDismiss(sender:)))
+                    currentTable.addGestureRecognizer(pinchGesture)
+                    
+                }
+                
+                
+                self.swipeableTableView.isScrollEnabled = false
+                
+                currentTable.tablePage.isUserInteractionEnabled = true
+                currentTable.tablePage.isPagingEnabled = true
+                
+            }
+          
 
             
         })
@@ -101,14 +132,23 @@ class TableSheetsViewController: UIViewController {
      
         }, completion: { (finished: Bool) in
 
-            currentView.removeGestureRecognizer(gestureRecognizer)
-
-            self.singleTap = UITapGestureRecognizer(target: self, action: #selector(TableSheetsViewController.handleSelection(sender:)))
-            self.singleTap.numberOfTapsRequired = 1
-            currentView.addGestureRecognizer(self.singleTap)
-            self.swipeableTableView.isScrollEnabled = true
-            currentView.tablePage.isUserInteractionEnabled = false
-            currentView.tablePage.contentOffset = CGPoint(x: 0, y: 0)
+            DispatchQueue.main.async {
+                currentView.removeGestureRecognizer(gestureRecognizer)
+                
+                
+                if (currentView.gestureRecognizers?.isEmpty)!{
+                    let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TableSheetsViewController.handleSelection(sender:)))
+                    gestureRecognizer.numberOfTapsRequired = 1
+                    currentView.addGestureRecognizer(gestureRecognizer)
+                    
+                }
+                
+                self.swipeableTableView.isScrollEnabled = false
+                self.swipeableTableView.isPagingEnabled = true
+                currentView.tablePage.isUserInteractionEnabled = false
+                currentView.tablePage.contentOffset = CGPoint(x: 0, y: 0)
+            }
+            
             
         })
 

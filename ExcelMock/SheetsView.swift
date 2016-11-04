@@ -17,7 +17,6 @@ class SheetsView: UIView {
     var headerLabel: UILabel!
     var tablePage : DataScrollView!
     
-    
     init(frame: CGRect, data: DataModel){
         super.init(frame:frame)
         self.dataTable = data
